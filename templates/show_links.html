@@ -5,13 +5,13 @@
     <li><a href="{{ url_for('login') }}">Prisijungti</a></li>
     <li><a href="{{ url_for('register') }}">Registruotis</a></li>
     {% endif %}
-    {% if user and user['admin'] == 0 and user['expert'] == 0 %}
+    {% if user and not user['admin'] and not user['expert'] %}
     <li><a href="{{ url_for('ask') }}">Įrašykite praleistą žodį</a></li>
     {% endif %}
-    {% if user and user['expert'] == 1 %}
+    {% if user and user['expert']%}
     <li><a href="{{ url_for('unanswered') }}">Answer Questions</a></li>
     {% endif %}
-    {% if user and user['admin'] == 1 %}
+    {% if user and user['admin']%}
     <li><a href="{{ url_for('users') }}">Vartotojo nustatymai</a></li>
     {% endif %}
     {% if user %}
