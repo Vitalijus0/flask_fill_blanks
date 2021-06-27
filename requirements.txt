@@ -42,7 +42,6 @@ jupyter-core==4.7.1
 jupyterlab-pygments==0.1.2
 jupyterlab-widgets==1.0.0
 lt-core-news-sm @ https://github.com/explosion/spacy-models/releases/download/lt_core_news_sm-2.2.5/lt_core_news_sm-2.2.5.tar.gz
-MarkupSafe==2.0.0
 mistune==0.8.4
 murmurhash==1.0.5
 nbclient==0.5.3
