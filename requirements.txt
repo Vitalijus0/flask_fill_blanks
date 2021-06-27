@@ -5,7 +5,7 @@ Werkzeug==0.12.1
 click
 gunicorn==19.7.1
 itsdangerous==0.24
-psycopg2==2.7.1
+psycopg2
 argon2-cffi==20.1.0
 async-generator==1.10
 attrs==21.2.0
