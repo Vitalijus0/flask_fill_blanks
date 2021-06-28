@@ -11,10 +11,8 @@ chardet==4.0.0
 click==7.1.2
 contextvars==2.4
 cymem==2.0.5
-dataclasses
 decorator==4.4.2
 defusedxml==0.7.1
-en-core-web-sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-2.2.5/en_core_web_sm-2.2.5.tar.gz
 entrypoints==0.3
 flashtext==2.7
 Flask==0.12.1
@@ -32,12 +30,6 @@ jedi==0.18.0
 Jinja2==2.9.6
 joblib==1.0.1
 jsonschema==3.2.0
-jupyter==1.0.0
-jupyter-client==6.1.12
-jupyter-console==6.4.0
-jupyter-core==4.7.1
-jupyterlab-pygments==0.1.2
-jupyterlab-widgets==1.0.0
 lt-core-news-sm @ https://github.com/explosion/spacy-models/releases/download/lt_core_news_sm-2.2.5/lt_core_news_sm-2.2.5.tar.gz
 MarkupSafe==2.0.0
 mistune==0.8.4
