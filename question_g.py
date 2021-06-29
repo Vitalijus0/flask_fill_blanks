@@ -13,12 +13,13 @@ from nltk.corpus import wordnet
 import traceback
 from nltk.tokenize import sent_tokenize
 from flashtext import KeywordProcessor
-import lt_core_news_sm
+#import lt_core_news_sm
 import pke
 import spacy
 #############################################
 
-nlp = lt_core_news_sm.load()
+#nlp = lt_core_news_sm.load()
+nlp = spacy.load("lt_core_news_sm")
 stop_word_list = [line.strip() for line in open("stopwords-lt.txt", 'r')]
 
 data_test = {'key1': 'value2', 'key2':'value2'}
