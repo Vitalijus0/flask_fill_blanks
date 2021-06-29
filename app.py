@@ -4,24 +4,6 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from flask import render_template_string
 import os
 
-import json
-import requests
-import string
-import re
-import nltk
-import string
-import itertools
-nltk.download('stopwords')
-nltk.download('wordnet')
-nltk.download('punkt')
-from nltk.corpus import stopwords
-from nltk.corpus import wordnet
-import traceback
-from nltk.tokenize import sent_tokenize
-from flashtext import KeywordProcessor
-import lt_core_news_sm
-import pke
-import spacy
 #############################################
 
 
