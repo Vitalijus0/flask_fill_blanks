@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% from "show_links.html" import show_links %}
+
+{% block title %}Virtualus mokymosi asistentas{% endblock %}
+
+{% block nav %}
+{{ show_links(user) }}
+{% endblock %}
+
+{% block body %}
+
+      <div class="page-header">
+        <h1>Virtualus mokymosi asistentas</h1>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="list-group">
+            <h3>Norėdami pasiūlyti pagalbą besimokant iš įvairių tekstų, pasitelkėme dirbtinį intelektą. Yra daug būdų mokytis informaciją iš teksto, o vienas iš pasitikrinti – pabandyti įrašyti praleistus esminius žodžius. Tiek dirbtinis intelektas, tiek mes mokomės teisingai suprasti lietuvių kalbą ir pateikti prasmę turinčius sakinius su trūkstamais žodžiais. Nors tai gali pasirodyti paprasta – iš tikrųjų tai yra gan sudėtinga semantinė užduotis. Prašome jūsų pagalbos testuojant prototipą</h3>
+          
+            
+          </div>
+        </div><!-- /.col-lg-12 -->
+      </div>
+{% endblock %}
+

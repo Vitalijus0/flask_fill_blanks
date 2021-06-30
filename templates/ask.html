@@ -1,0 +1,162 @@
+{% extends "base.html" %}
+{% from "show_links.html" import show_links %}
+
+{% block title %}Ask{% endblock %}
+
+{% block nav %}
+{{ show_links(user) }}
+{% endblock %}
+
+{% block body %}
+
+      <div class="page-header">
+        <h1>„Įrašykite praleistą žodį“ užduočių kūrėjas</h1>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="well bs-component">
+            <form class="form-horizontal" action="/ask" method="POST">
+              <fieldset>
+                <div class="form-group">
+                  <label for="textArea" class="col-lg-2 control-label">Įkopijuokite tekstą</label>
+                    <div class="col-lg-10">
+                      <textarea class="form-control" rows="20" name="question" id="textArea", required="true"  placeholder="Minimalus teksto ilgis – 20 spaudos ženklų"></textarea>
+                    </div>
+                  </div>
+                  <div class="form-group" style="display: none;">
+                    <label for="select" class="col-lg-2 control-label">Expert</label>
+                    <div class="col-lg-10">
+                      <select hiddenclass="form-control" name="expert" id="select">
+                        {% for expert in experts %}
+                        <option value="{{ expert['id'] }}">{{ expert['name'] }}</option>
+                        {% endfor %}
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-lg-10 col-lg-offset-2">
+                      <button type="submit" class="btn btn-primary", name = 'question_gen' value = 'question_gen'>Sukurti sakinius su trūkstamais žodžiais</button>
+                      <button class="btn btn-primary" onclick="document.getElementById('textArea').value = ''">Ištrinti tekstą</button>
+                    </div>
+                  </div>
+
+                  </ul>
+                  </div>
+              </form>
+            </div>
+
+            <hr>
+            <html>
+              <head>
+              <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+              <body>
+
+
+                <button class="btn btn-primary" onclick="myFunction()">Rodyti rezultatus</button>
+
+                <div id="myDIV">
+                <div class="container">
+                              <head>
+                                <meta name="viewport" content="width=device-width, initial-scale=1">
+                                <style>
+                                .col-container {
+                                  display: table;
+                                  width: 100%;
+                                }
+                                .col {
+                                  display: table-cell;
+                                  padding: 16px;
+                                }
+                                </style>
+                                </head>
+                                <body>
+                                
+                                
+                                <h2>Sugeneruoti sakiniai</h2>
+                                
+                                  <div class="col", style="width: 20%;">
+                                    <h2>Raktažodžiai</h2>
+                                    {% for item in raktazodziai %}
+                                    <p> {{ item }} </p>
+                                    {% endfor %}
+                                  </div>
+                                
+                                  <div class="col" >
+                                    <h2>Sakiniai</h2>
+                                    {% for item2 in sakiniai %}
+                                  <p> {{ item2 }} </p>
+                                  {% endfor %}
+                                  </div>
+                                </div>
+                                
+                                </body>
+                        
+                                  
+                                
+                              </ul>
+                              </div>
+                            </div>
+                </div>
+
+
+                <script>
+                function myFunction() {
+                  var x = document.getElementById("myDIV");
+                  if (x.style.display === "none") {
+                    x.style.display = "block";
+                  } else {
+                    x.style.display = "none";
+                  }
+                }
+                </script>
+
+              </body>
+
+            </div>
+
+          </div>
+            
+          
+            
+          <hr>
+
+            
+                <fieldset>
+                  
+                  <form class="form-horizontal" action="/ask" method="POST">
+                      <div class="col-lg-8">
+                        <div class="col-md-10 col-lg-offset-7">
+                            <h2>Jūsų pastabos ir komentarai</h2>
+                          </div>
+                          
+                        <textarea class="col-md-10 col-lg-offset-4" rows="5" name="comments" id="textArea"  placeholder=" "></textarea>
+                      </div>
+                        <div class="form-group">
+                          <div class="col-lg-10 col-lg-offset-3", style="left: 20%;">
+                            <style>
+
+                            </style>
+                            <button type="submit" class="btn btn-primary" name="Komentuoti" value="Komentuoti" >Komentuoti</button>
+                            
+                          </div>
+                        </div>
+  
+                    </ul>
+                    </div>
+                </form>
+              </div>
+
+            </div>
+          </div>
+
+
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+      
+{% endblock %}
