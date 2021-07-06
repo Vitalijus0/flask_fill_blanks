@@ -17,7 +17,7 @@ def get_db():
 
 
 def connect_db():
-    conn = psycopg2.connect('postgres://qcbliaszmcbbng:4274efcc9ee3b3337882a8cb2de97870ab167cd5a08d1b3cbec3552315a040d8@ec2-54-91-188-254.compute-1.amazonaws.com:5432/ddedqpthdpp49l', cursor_factory=DictCursor)
+    conn = psycopg2.connect('postgres://ymqyxqhwnoojlv:cd9240186a3287b43f7632c4ba12f40f32b4994228ad049b35dfe4abaefbe030@ec2-54-227-246-76.compute-1.amazonaws.com:5432/dfjjjf4hg2bau4', cursor_factory=DictCursor)
     conn.autocommit = True
     sql = conn.cursor()
     return conn, sql
