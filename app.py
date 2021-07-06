@@ -14,7 +14,7 @@ from question_g import tokenize_sentences, tokenize_sentences, get_sentences_for
 
 app = Flask(__name__)
 app.config['JSONIFY_PRETTYPRINT_REGULAR'] = False
-app.config['SECRET_KEY'] = os.urandom(24)
+app.config['SECRET_KEY'] = b':~\xfa\xb0\xdc\x99K\\\x9e$\x1aF\x92\xb4\xe7"\xff[\xe0|\x0bS\xba?'
 
 @app.teardown_appcontext
 def close_db(error):
