@@ -13,3 +13,7 @@ Werkzeug==0.12.1
 itsdangerous==0.24
 click==6.7
 MarkupSafe
+urllib3
+Flask-SQLAlchemy
+six
+SQLAlchemy
